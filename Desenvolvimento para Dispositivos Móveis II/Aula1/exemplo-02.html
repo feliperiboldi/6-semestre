@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React</title>
+
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="js/babel.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Página</h1>
+    </div>
+
+    <script type="text/babel">
+        function Page() {
+            return (
+                <div>
+                    <Header/>
+                    <Content/>
+                    <Footer/>
+                </div>
+            );
+        }
+
+        function Header() {
+            return (
+                <header>
+                    <Navgation/>
+                    <Image dirImage="../image/" textAlternate="React"/>
+                </header>
+            );
+        }
+
+        function Content() {
+            return (
+                <main>
+                    Conteúdo
+                </main>
+            );
+        }
+
+        function Footer() {
+            return (
+                <footer>
+                    Rodapé
+                </footer>
+            );
+        }
+
+        function Image(props) {
+            return (
+                <img src={props.dirImage} alt={props.textAlternate}/>
+            );
+        }
+
+        function Navgation() {
+            return (
+                <nav>
+                    <ul>
+                        <li>Início</li>
+                    </ul>
+                </nav>
+            );
+        }
+
+        ReactDOM.render(<Page/>, 
+            document.querySelector('#app'));
+    </script>
+</body>
+</html>
