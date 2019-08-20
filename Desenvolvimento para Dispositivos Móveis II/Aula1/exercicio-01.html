@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React</title>
+
+    <script src="js/react.min.js"></script>
+    <script src="js/react-dom.min.js"></script>
+    <script src="js/babel.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        
+    </div>
+
+    <script type="text/babel">
+        function Page() {
+            return (
+                <div>
+                    <Navbar/>
+                    <Titleproject/>
+                    <Teaminvolved/>
+                    <Projectactivity/>
+                </div>
+            );
+        }
+
+        function Navbar() {
+            return (
+                <header>
+                    <Userinfo/>
+                    <Navmenu/>
+                </header>
+            );
+        }
+
+        function Userinfo() {
+            return (
+                <section>User Info</section>
+            );
+        }
+
+        function Navmenu() {
+            return (
+                <nav>Nav Menu</nav>
+            );
+        }
+
+        function Titleproject() {
+            return (
+                <h1>Project Honeycomb</h1>
+            );
+        }
+
+        function Teaminvolved() {
+            return (
+                <section>
+                    <ul>
+                        <Membersteam/>
+                    </ul>
+                </section>
+            );
+        }
+
+        function Membersteam() {
+            return (
+                <li>Antonio King</li>
+            ); 
+        }
+
+        function Projectactivity() {
+            return (
+                <section>
+                    <ul>
+                        <Project/>
+                    </ul>
+                </section>
+            );
+        }
+
+        function Project() {
+            return (
+                <li>Graph & Statistics</li>
+            );
+        }
+
+        ReactDOM.render(<Page/>, 
+            document.querySelector('#app'));
+    </script>
+</body>
+</html>
